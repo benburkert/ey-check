@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+owned, msg = unless defined?(RUBY_ENGINE)
+  puts "sorry, EY owns your rubyies"
+else
+  case RUBY_ENGINE
+  when 'jruby', 'rbx' then
+    puts "sorry, EY owns your rubyies"
+  else
+    puts "congrats, you have escaped the evil clutches of EY (for now)"
+  end
+end
