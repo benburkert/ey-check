@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-owned, msg = unless defined?(RUBY_ENGINE)
-  puts "sorry, EY owns your rubyies"
+unless defined?(RUBY_ENGINE)
+  puts "sorry, EY owns your rubyies: MRI #{RUBY_VERSION}"
 else
   case RUBY_ENGINE
   when 'jruby', 'rbx' then
-    puts "sorry, EY owns your rubyies"
+    puts "sorry, EY owns your rubyies: #{RUBY_ENGINE} #{RUBY_VERSION}"
   else
-    puts "congrats, you have escaped the evil clutches of EY (for now)"
+    puts "congrats, you have escaped the evil clutches of EY (for now): #{RUBY_ENGINE} #{RUBY_VERSION}"
   end
 end
